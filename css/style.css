@@ -1,0 +1,497 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  z-index: 2000;
+  border-bottom: solid 1px #080707;
+   /* overflow: hidden; necessário para os enfeites */
+}
+
+/* Logo */
+nav .logo {
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  font-size: 3em;
+  color: #f06292;
+  margin-left: 10%;
+  position: relative;
+  z-index: 1; /* garante que fique acima dos enfeites */
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-right: 10%;
+  position: relative;
+  z-index: 1; /* mantém os links acima dos enfeites */
+}
+
+nav ul li a {
+  color: black;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f06292;
+  border-top: #f06292 2px solid;
+  padding-top: 25px;
+}
+
+/* ===== Enfeites sutis múltiplos ===== */
+nav .confete {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(240, 98, 146, 0.15);
+  z-index: 0;
+  animation: float 6s infinite ease-in-out alternate;
+}
+
+/* diferentes tamanhos e posições */
+nav .confete:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 30px;
+  animation-delay: 0s;
+}
+
+nav .confete:nth-child(2) {
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  left: 120px;
+  animation-delay: 1s;
+}
+
+nav .confete:nth-child(3) {
+  width: 25px;
+  height: 25px;
+  top: 15px;
+  left: 220px;
+  animation-delay: 2s;
+}
+
+nav .confete:nth-child(4) {
+  width: 18px;
+  height: 18px;
+  top: 12px;
+  right: 150px;
+  animation-delay: 0.5s;
+}
+
+nav .confete:nth-child(5) {
+  width: 12px;
+  height: 12px;
+  top: 20px;
+  right: 50px;
+  animation-delay: 1.5s;
+}
+
+/* animação suave */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(15deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ===== BOTÃO HAMBÚRGUER ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 2100; /* acima de tudo */
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #f06292;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+
+
+
+/* ===== Hero ===== */
+#hero {
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("img/hero.png") center/cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  
+}
+
+.hero-img img {
+  width: 600px;
+  margin-top: 19%;
+  border-radius: 2%;
+  
+ 
+  
+}
+
+#hero .hero-content {
+ width: 60%;
+ 
+ margin-right: 2%;
+}
+
+#hero h1 {
+  font-family: "Playfair Display", serif; /* contraste elegante */
+  font-size: 4em;
+  color: #f06292;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 10%;
+}
+
+#hero p {
+  font-size: 1.4em;
+  margin-bottom: 30px;
+  padding-top: 3%;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: white;
+ 
+}
+
+.btn {
+  display: inline-block;
+  background: #f06292;
+  color: white;
+  padding: 18px 27px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 180px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== Container ===== */
+.container {
+  width: 90%;
+  
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* ===== Sobre ===== */
+#sobre {
+   background: linear-gradient(135deg, #fff 0%, #fce4ec 100%);
+  padding: 20px ;
+  width: 100%;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: center;   /* alinha verticalmente */
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 40px;
+}
+
+.sobre-foto {
+  width: 35%;               /* ocupa 35% da largura */
+  border-radius: 8px;
+  flex-shrink: 0;            /* evita deformar */
+  object-fit: cover;         /* mantém proporção */
+}
+
+.sobre-texto {
+  flex: 1;                   /* ocupa todo o espaço restante */
+  text-align: left;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+
+  /* tipografia */
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: #444;
+  text-indent: 15px; /* recuo no começo de cada parágrafo */
+}
+
+
+.sobre-texto p + p {
+  margin-top: 15px; /* espaçamento entre parágrafos */
+}
+
+.sobre-texto h2 {
+  font-family: "Playfair Display", serif; /* contraste elegante */
+  font-size: 4em;
+  color: #f06292;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+/* ===== Serviços ===== */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.servico {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+#servicos h2{
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f06292;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.servico img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.servico h3 {
+  color: #f06292;
+  margin-bottom: 10px;
+}
+
+.servico p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.servico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+
+/* ===== Depoimentos ===== */
+#depoimentos h2 {
+   font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f06292;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.depoimento {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-left: 5px solid #f06292;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* ===== Diferenciais ===== */
+#diferenciais {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+#difereciais div {
+  border: solid 1px red;
+}
+
+#diferenciais h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  color: #f06292;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.diferenciais-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.diferenciais-lista li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: 30px;
+  justify-content: flex-start;
+  transition: 0.3s;
+}
+
+.diferenciais-lista li i {
+  font-size: 2rem;
+  color: #f06292;
+  transition: 0.3s;
+}
+
+/* Hover leve nos itens */
+.diferenciais-lista li:hover i {
+  color: #ff85b3;
+  transform: translateY(-3px);
+}
+
+
+/* ===== Contato ===== */
+#contato {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#contato h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  color: #f06292;
+  margin-bottom: 50px;
+}
+
+.contato-info p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contato-info a {
+  color: #f06292;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contato-info a:hover {
+  color: #ff85b3;
+  text-decoration: underline;
+}
+
+.contato-info i {
+  font-size: 1.5rem;
+  color: #f06292;
+  transition: 0.3s;
+}
+
+.contato-info p:hover i {
+  color: #ff85b3;
+  transform: translateY(-2px);
+}
+
+.mapa {
+  margin-top: 40px;
+  border-radius: 12px;
+  overflow: hidden; /* deixa bordas arredondadas no iframe */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.mapa iframe {
+  border: 0;
+  width: 100%;
+  height: 350px;
+}
+
+
+
+/* ===== Rodapé ===== */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+}
+
+
+/* WhatsApp fixo */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366; /* verde WhatsApp */
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.whatsapp-fixo i {
+  font-size: 1.5rem;
+}
+
+.whatsapp-fixo:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-3px);
+}
+
