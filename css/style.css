@@ -150,7 +150,7 @@ nav .confete:nth-child(5) {
 /* ===== Hero ===== */
 #hero {
   background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("https://github.com/Leobtsd/Amanda-Kelly-Studio/blob/main/img/hero.png") center/cover;
+              url("../img/hero.png") center/cover;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -494,6 +494,7 @@ footer {
   background-color: #1ebe5d;
   transform: translateY(-3px);
 }
+
 
 
 
