@@ -147,6 +147,7 @@
   /* === Diferenciais === */
   .diferenciais-lista li {
     font-size: 1rem;
+    white-space: nowrap;  /* Impede a quebra de linha */
   }
 
   /* === Contato === */
@@ -353,6 +354,7 @@
   }
 
 }
+
 
 
 
