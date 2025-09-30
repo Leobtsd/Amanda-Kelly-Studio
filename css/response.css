@@ -333,7 +333,7 @@
   }
 
   .hero-img img {
-    width: 350px; /* Diminui o tamanho da imagem */
+    width: 80%; /* Diminui o tamanho da imagem */
     margin-top: 10%; /* Ajusta a margem superior */
   }
 
@@ -354,6 +354,7 @@
   }
 
 }
+
 
 
 
