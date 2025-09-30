@@ -327,7 +327,7 @@
 }
 
 
-@media (max-width: 1366px) {
+@media (max-width: 1558px) {
   #hero {
     height: 120vh; /* Reduz a altura da seção hero */
   }
@@ -354,6 +354,7 @@
   }
 
 }
+
 
 
 
